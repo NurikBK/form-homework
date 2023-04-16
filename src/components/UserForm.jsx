@@ -24,13 +24,13 @@ const UserForm = () => {
           resetForm();
         }}
       >
-        {({ values, handleSubmit, handleReset }) => (
+        {({ values, handleSubmit, handleReset, dirty, isValid }) => (
           <Form className="form-container" onSubmit={handleSubmit}>
             <CTextInput
               label="First Name"
               name="firstName"
               type="text"
-              placeholder="Enter your name"
+              placeholder="Enter your first name"
             />
 
             <CTextInput
@@ -89,15 +89,20 @@ const UserForm = () => {
                 ))}
               </div>
             </div>
-            <CTextarea name="notes" label="Notes" />
+            <CTextarea cols={40} rows={5} name="notes" label="Notes" />
             <div className="btn-wrapper">
-              <button type="submit" className="btn btn-submit">
+              <button
+                type="submit"
+                className="btn btn-submit"
+                disabled={!dirty || !isValid}
+              >
                 Submit
               </button>
               <button
-                type="reset"
+                type="button"
                 className="btn btn-reset"
                 onClick={handleReset}
+                disabled={!dirty}
               >
                 Reset
               </button>
