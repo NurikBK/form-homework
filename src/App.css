@@ -61,6 +61,11 @@ input[type='number'] {
   padding: 8px 25px;
   border-radius: 6px;
   border: none;
+  transition: scale 0.3 ease-in-out;
+}
+
+.btn:active {
+  scale: 0.98;
 }
 
 .btn-submit {
@@ -70,6 +75,17 @@ input[type='number'] {
 .btn-reset {
   background-color: hsl(0, 1%, 77%);
   color: #000;
+}
+
+.btn-submit:disabled {
+  background-color: hsla(224, 42%, 37%, 0.6);
+  scale: none;
+}
+
+.btn-reset:disabled {
+  background-color: hsla(0, 1%, 77%, 0.5);
+  color: hsl(0, 1%, 77%);
+  scale: none;
 }
 
 .error {
