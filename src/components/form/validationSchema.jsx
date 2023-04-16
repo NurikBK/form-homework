@@ -7,11 +7,11 @@ export const validationSchema = Yup.object({
   lastName: Yup.string()
     .max(20, 'Must be 20 characters or less')
     .required('Required'),
-  email: Yup.string().email('Invalid email address').required('Required'),
-  acceptedTerms: Yup.boolean()
-    .required('Required')
-    .oneOf([true], 'You must accept the terms and conditions.'),
-  jobType: Yup.string()
-    .oneOf(['designer', 'development', 'product', 'other'], 'Invalid Job Type')
+  age: Yup.number()
+    .min(18, 'Must be 18 or more')
+    .max(100, 'Must be 100 or less')
+    .required('Required'),
+  notes: Yup.string()
+    .max(100, 'Must be 100 characters or less')
     .required('Required'),
 });
