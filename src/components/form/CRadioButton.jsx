@@ -1,7 +1,7 @@
 import React from 'react';
 import { useField } from 'formik';
 
-const RadioButton = ({ label, ...props }) => {
+const CRadioButton = ({ label, ...props }) => {
   const [field] = useField(props);
 
   return (
@@ -17,4 +17,4 @@ const RadioButton = ({ label, ...props }) => {
   );
 };
 
-export default RadioButton;
+export default CRadioButton;

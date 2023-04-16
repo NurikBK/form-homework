@@ -1,7 +1,7 @@
 import React from 'react';
 import { useField } from 'formik';
 
-const CheckBox = ({ children, ...props }) => {
+const CCheckBox = ({ children, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
   return (
     <div>
@@ -14,4 +14,4 @@ const CheckBox = ({ children, ...props }) => {
   );
 };
 
-export default CheckBox;
+export default CCheckBox;
