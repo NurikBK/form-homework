@@ -1,7 +1,7 @@
 import React from 'react';
 import { useField } from 'formik';
 
-const CRadioButton = ({ label, ...props }) => {
+export const CRadioButton = ({ label, ...props }) => {
   const [field] = useField(props);
 
   return (
@@ -12,9 +12,9 @@ const CRadioButton = ({ label, ...props }) => {
         {...props}
         checked={field.value === props.value}
       />
-      <label htmlFor={props.id || props.name}>{label}</label>
+      <label htmlFor={props.id}>{label}</label>
     </div>
   );
 };
 
-export default CRadioButton;
+

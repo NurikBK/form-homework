@@ -1,10 +1,10 @@
 import React from 'react';
 import { useField } from 'formik';
 
-const CSelectOptions = ({ label, ...props }) => {
+export const CSelectOptions = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
-    <div>
+    <div className="wrapper">
       <label htmlFor={props.id || props.name}>{label}</label>
       <select {...field} {...props} />
       {meta.touched && meta.error ? (
@@ -14,4 +14,3 @@ const CSelectOptions = ({ label, ...props }) => {
   );
 };
 
-export default CSelectOptions;
