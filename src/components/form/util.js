@@ -26,7 +26,7 @@ export const initialValues = {
   age: '',
   employed: false,
   favoriteColor: '',
-  souces: [],
+  sauces: [],
   stooge: 'Larry',
   notes: '',
 };
